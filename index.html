@@ -296,30 +296,41 @@
 
             <div class="contact-right">
 
-                <form>
+               <form id="contact-form">
 
-                    <input type="text"
-                    name="Name"
-                    placeholder="Your Name"
-                    required>
+    <input
+        type="text"
+        name="from_name"
+        placeholder="Your Name"
+        required
+    >
 
-                    <input type="email"
-                    name="Email"
-                    placeholder="Your Email"
-                    required>
+    <input
+        type="email"
+        name="from_email"
+        placeholder="Your Email"
+        required
+    >
 
-                    <textarea
-                    name="Message"
-                    rows="6"
-                    placeholder="Your Message">
-                    </textarea>
+    <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required
+    >
 
-                    <button type="submit" class="btn btn2">
-                        Submit
-                    </button>
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Your Message"
+        required
+    ></textarea>
 
-                </form>
+    <button type="submit" class="btn btn2">
+        Send Message
+    </button>
 
+</form>
             </div>
 
         </div>
@@ -331,6 +342,7 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 
 </body>
