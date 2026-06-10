@@ -14,3 +14,33 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+// EmailJS
+
+emailjs.init("4wOUbnxxmqKYiiObr");
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_4i6uqgg",
+        "template_phtl9zo",
+        this
+      )
+      .then(() => {
+
+        alert("✅ Message Sent Successfully!");
+        this.reset();
+
+      })
+      .catch((error) => {
+
+        console.log(error);
+        alert("❌ Failed to Send Message");
+
+      });
+
+  });
